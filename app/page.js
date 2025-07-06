@@ -10,7 +10,10 @@ const Home = () => {
   return (
     <main>
 
-      <div className='text-2xl  flex  flex-col min-h-screen '>
+      <div className='text-2xl  flex  flex-col min-h-screen  '>
+        <div className='w-full'>
+
+        </div>
 
        <Header/>
 

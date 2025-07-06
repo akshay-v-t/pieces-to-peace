@@ -3,17 +3,17 @@
 
 :root {
   --font-edensor: 'Edensor';
+  --font-openSans: 'Open Sans';
   --background: #ffffff;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
-    --foreground: #000000;
+    --background: #000000; 
+    --foreground: #ffffff;
   }
 }
-
 
 @font-face {
   font-family: 'Edensor';
@@ -28,35 +28,28 @@ body {
   font-family: var(--font-lora), sans-serif;
 }
 
-h1{
-   font-family: var(--font-edensor), sans-serif;
-   font-size: 48px;
-
-}
-
-h2,h4,h5,h6{
+h1, h2, h4, h5, h6 {
   font-family: var(--font-edensor), sans-serif;
+  font-size: 48px;
 }
 
-h3{
+h3 {
   font-family: var(--font-openSans), sans-serif;
 }
 
-button{
-  color: #49372B ;
+button {
+  color: #49372B;
   background-color: #D7D1BE;
-  font-size: 18px;;
-  cursor: pointer;
-  transition: ease-in-out;
-  transition-duration: 0.3s;
-
-}
-button:hover{
-  color: #D7D1BE ;
-  background-color:  #49372B;
-
-}
-p{
   font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 
+button:hover {
+  color: #D7D1BE;
+  background-color: #49372B;
+}
+
+p {
+  font-size: 18px;
 }

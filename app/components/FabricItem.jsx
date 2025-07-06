@@ -3,7 +3,7 @@ import React from 'react'
 
 const FabricItem = ({name,imageUrl}) => {
   return (
-    <div>
+    <div className='bg-amber-600 w-full flex items-center flex-col '>
         <Image
 
         src={imageUrl}
@@ -11,7 +11,7 @@ const FabricItem = ({name,imageUrl}) => {
         height={400}
         alt='category'
         />
-        <h3>{name}</h3>
+        <h3 className=''>{name}</h3>
     </div>
   )
 }
