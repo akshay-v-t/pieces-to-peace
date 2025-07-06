@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const Header = () => {
   return (
-    <div className="bg-amber-50/80 w-full py-3 px-4 flex justify-between  gap-4 border-b-1 fixed top-0 backdrop-blur-md z-50" >
+    <div className="bg-amber-50/80 w-full py-3 px-14 flex justify-center  gap-4 border-b-1 fixed top-0 backdrop-blur-md z-50 " >
 
-        <div className='text-sm  flex items-center w-[33vh]' >
+        <div className='text-sm  flex items-center w-1/3 ' >
             <ul className='flex gap-10 cursor-pointer'>
                 <li>About</li>
                 <li>Contact Us</li>
@@ -12,12 +12,12 @@ const Header = () => {
 
 
         </div>
-        <div className='w-[33vh]'>
+        <div className='w-1/3 flex justify-center '>
              <Image src="/images/Logo.png" width={200} height={100} alt="Logo" />
 
         </div>
 
-        <div className='text-sm  flex items-center w-[33vh]  w'>
+        <div className='text-sm  flex justify-end items-center-safe w-1/3 '>
             <ul className='flex gap-10'>
                 <li>Shop</li>
             </ul>

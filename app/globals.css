@@ -10,9 +10,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000; 
-    --foreground: #ffffff;
+ --background: #ffffff;
+  --foreground: #171717;
   }
+ 
 }
 
 @font-face {
@@ -34,7 +35,9 @@ h1, h2, h4, h5, h6 {
 }
 
 h3 {
-  font-family: var(--font-openSans), sans-serif;
+    font-family: var(--font-lora), sans-serif;
+      font-weight: 200;
+
 }
 
 button {

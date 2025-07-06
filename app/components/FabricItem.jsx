@@ -3,15 +3,16 @@ import React from 'react'
 
 const FabricItem = ({name,imageUrl}) => {
   return (
-    <div className='bg-amber-600 w-full flex items-center flex-col '>
+    <div className='w-full flex  flex-col gap-2 cursor-pointer'>
         <Image
 
         src={imageUrl}
         width={300}
         height={400}
         alt='category'
+        className='cursor-pointer'
         />
-        <h3 className=''>{name}</h3>
+        <h3 className='text-xl'>{name}</h3>
     </div>
   )
 }

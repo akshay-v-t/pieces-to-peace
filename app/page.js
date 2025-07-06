@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import BelowHeader from './sections/BelowHeader'
 import AboutSection from './sections/AboutSection'
 import CategoriesSection from './sections/CategoriesSection'
+import KeyFeatures from './sections/KeyFeatures'
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
        <AboutSection/>
        <BelowHeader/>
        <CategoriesSection/>
+       <KeyFeatures/>
 
        <Footer/>
       </div>

@@ -7,9 +7,9 @@ const CategoriesSection = () => {
 
   return (
      <div className='flex flex-col p-10 justify-center'>
-        <h2>Explore Our Categories</h2>
+        <h2>Explore Our Fabrics</h2>
 
-        <div className='grid grid-cols-4 mt-10 justify-between'>
+        <div className='grid grid-cols-4 gap-8 mt-10 w-full '>
 {
         categories.map((item, index)=>{
             return  <FabricItem key={index} name={item.name} imageUrl={item.bgImage}/>
