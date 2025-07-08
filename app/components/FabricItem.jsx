@@ -7,7 +7,7 @@ const FabricItem = ({name,imageUrl}) => {
         <Image
 
         src={imageUrl}
-        width={300}
+        width={400}
         height={400}
         alt='category'
         className='cursor-pointer'

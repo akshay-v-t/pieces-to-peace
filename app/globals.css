@@ -37,7 +37,7 @@ body {
   font-family: sen, sans-serif;
 }
 
-h1, h2, h4, h5, h6 {
+h1, h2, h4 {
   font-family: var(--font-edensor), sans-serif;
   font-size: 48px;
 }
@@ -58,10 +58,27 @@ button {
 
 button:hover {
   color: #D7D1BE;
-  background-color: #49372B;
+  background-color: #
+  49352C;
 }
 
-p {
+p  {
   font-size: 18px;
+  color:  #49352C;
 
+}
+
+ul {
+  font-size: 18px;
+  margin-top: 20px;
+
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

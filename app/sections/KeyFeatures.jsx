@@ -2,7 +2,7 @@ import React from 'react'
 
 const KeyFeatures = () => {
   return (
-    <div className='flex flex-col p-10 justify-center'>
+    <div className='flex flex-col p-10 justify-center '>
 
       <div className="flex bg-[url('/images/floral.webp')] bg-cover bg-center items-center justify-center flex-col py-20 "  >
       <div className='bg-white/80 p-20'>

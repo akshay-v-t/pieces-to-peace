@@ -1,20 +1,61 @@
-import React from 'react'
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const containerVariants = {
+  hidden: { scale: 1.2, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 1.2,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const textVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.5 + i * 0.3,
+      duration: 0.8,
+      ease: 'easeOut',
+    },
+  }),
+};
 
 const Hero = () => {
   return (
-    <div className="flex min-h-screen bg-[url('/images/Hero-bg.webp')] bg-cover bg-center items-center justify-center text-white flex-col " >
-  
+    <motion.div
+      className="flex min-h-screen bg-[url('/images/Hero-bg.webp')] bg-cover bg-center items-center justify-center text-white flex-col"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.h1
+        className="font-medium mt-auto text-4xl md:text-5xl"
+        variants={textVariants}
+        custom={0}
+        initial="hidden"
+        animate="visible"
+      >
+        Wallpapers
+      </motion.h1>
 
-        <h1 className=' font-medium mt-auto'>Wallpapers</h1>
+      <motion.div
+        className="mt-auto mb-10 text-s"
+        variants={textVariants}
+        custom={1}
+        initial="hidden"
+        animate="visible"
+      >
+        <h5 className="text-black">Discover our designs</h5>
+      </motion.div>
+    </motion.div>
+  );
+};
 
-        <div className='mt-auto mb-10 text-s'>
-            <h5 className='text-xl text-amber-800'>
-                Discover our designs
-            </h5>
-        </div>
-
-    </div>
-  )
-}
-
-export default Hero
+export default Hero;

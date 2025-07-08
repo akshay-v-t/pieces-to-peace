@@ -1,19 +1,45 @@
-import React from 'react'
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const imageVariants = {
+  hidden: { scale: 1.2, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 1.2, ease: 'easeOut' },
+  },
+};
 
 const BelowHeader = () => {
   return (
-    <div className='flex flex-row'>
-        <div className="flex min-h-screen w-[50vw] bg-[url('/images/curtain.jpg')] bg-cover bg-center items-center justify-center n flex-col" >
-        <h1> aliquip ex ea</h1>
-        </div>
- <div className=" flex min-h-screen w-[50vw] bg-[url('/images/curtains.jpg')] bg-cover bg-center items-center justify-center flex-col" >
-<h1>occaecat cupidatat </h1>
+    <div className="flex flex-row ">
+      {/* Left Section */}
+      <div className="relative flex min-h-screen w-full md:w-[50vw] items-center justify-center overflow-hidden">
+        <motion.div
+          className="absolute inset-0 bg-[url('/images/curtain.jpg')] bg-cover bg-center"
+          variants={imageVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        />
+        <h1 className="text-white text-3xl font-bold z-10 relative">aliquip ex ea</h1>
+      </div>
 
-        </div>
-
-
+      {/* Right Section */}
+      <div className="relative flex min-h-screen w-full md:w-[50vw] items-center justify-center overflow-hidden">
+        <motion.div
+          className="absolute inset-0 bg-[url('/images/curtains.jpg')] bg-cover bg-center"
+          variants={imageVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ delay: 0.3, duration: 1.2 }}
+        />
+        <h1 className="text-white text-3xl font-bold z-10 relative">occaecat cupidatat</h1>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default BelowHeader
+export default BelowHeader;
