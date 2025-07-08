@@ -6,6 +6,7 @@ import BelowHeader from './sections/BelowHeader'
 import AboutSection from './sections/AboutSection'
 import CategoriesSection from './sections/CategoriesSection'
 import KeyFeatures from './sections/KeyFeatures'
+import OurValuesSection from './sections/OurValuesSection'
 
 const Home = () => {
   return (
@@ -24,6 +25,8 @@ const Home = () => {
        <BelowHeader/>
        <CategoriesSection/>
        <KeyFeatures/>
+       <OurValuesSection/>
+
 
        <Footer/>
       </div>
