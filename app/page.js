@@ -8,11 +8,12 @@ import CategoriesSection from './sections/CategoriesSection'
 import KeyFeatures from './sections/KeyFeatures'
 import OurValuesSection from './sections/OurValuesSection'
 
+
 const Home = () => {
   return (
     <main>
 
-      <div className='text-2xl  flex  flex-col min-h-screen  '>
+      <div className='text-2xl  flex  flex-col min-h-screen overflow-hidden  '>
         <div className='w-full'>
 
         </div>
@@ -26,6 +27,7 @@ const Home = () => {
        <CategoriesSection/>
        <KeyFeatures/>
        <OurValuesSection/>
+
 
 
        <Footer/>

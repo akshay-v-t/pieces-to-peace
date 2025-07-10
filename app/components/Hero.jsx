@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const containerVariants = {
-  hidden: { scale: 1.2, opacity: 0 },
+  hidden: { scale: 1.2, opacity: 0, transformOrigin: 'center'  },
   visible: {
     scale: 1,
     opacity: 1,
@@ -30,11 +30,12 @@ const textVariants = {
 const Hero = () => {
   return (
     <motion.div
-      className="flex min-h-screen bg-[url('/images/Hero-bg.webp')] bg-cover bg-center items-center justify-center text-white flex-col"
+      className="flex min-h-screen  bg-[url('/images/Hero-bg.webp')] bg-cover bg-center items-center justify-center text-white flex-col "
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
+      
       <motion.h1
         className="font-medium mt-auto text-4xl md:text-5xl"
         variants={textVariants}
@@ -42,8 +43,10 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        Wallpapers
+        consectetur adipiscing elit
       </motion.h1>
+
+      
 
       <motion.div
         className="mt-auto mb-10 text-s"
@@ -52,7 +55,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        <h5 className="text-black">Discover our designs</h5>
+        <h5 className="text-black">sed do eiusmod </h5>
       </motion.div>
     </motion.div>
   );

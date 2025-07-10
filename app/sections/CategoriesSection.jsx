@@ -3,10 +3,11 @@ import React, { useRef } from 'react';
 import FabricItem from '../components/FabricItem';
 import { categories } from '../../public/data';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const CategoriesSection = () => {
   const scrollRef = useRef(null);
-  const itemWidth = 250; // width of one item
+  const itemWidth = 250;
 
   const scroll = (direction) => {
     if (!scrollRef.current) return;
@@ -16,9 +17,30 @@ const CategoriesSection = () => {
     });
   };
 
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.2, 
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -30 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut',
+      },
+    },
+  };
+
   return (
     <div className="relative px-10 py-20 text-center w-full overflow-hidden">
-      <h2 className="text-3xl  mb-10">Explore Our Fabrics</h2>
+      <h2 className="text-3xl mb-10">Explore Our Fabrics</h2>
 
       {/* Arrows */}
       <button
@@ -35,21 +57,25 @@ const CategoriesSection = () => {
         <ChevronRight />
       </button>
 
-      {/* Carousel */}
-      <div
+      {/* Carousel with animations */}
+      <motion.div
         ref={scrollRef}
         className="flex gap-6 snap-x snap-mandatory scroll-smooth overflow-x-auto scrollbar-hide px-2"
-        style={{ scrollBehavior: 'smooth' }}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
       >
         {categories.map((item, index) => (
-          <div
+          <motion.div
             key={index}
             className="flex-shrink-0 w-[250px] snap-start"
+            variants={itemVariants}
           >
             <FabricItem name={item.name} imageUrl={item.bgImage} />
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

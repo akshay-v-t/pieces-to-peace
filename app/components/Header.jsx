@@ -1,30 +1,55 @@
+'use client';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
   return (
-    <div className="bg-amber-50/80 w-full py-3 px-14 flex justify-center  gap-4 border-b-1 fixed top-0 backdrop-blur-md z-50 " >
+    <motion.header className="bg-amber-50/80 w-full py-3 px-6 md:px-14 fixed top-0 z-50 backdrop-blur-md border-b text-lg"
 
-        <div className='text-sm  flex items-center w-1/3 ' >
-            <ul className='flex gap-10 cursor-pointer'>
-                <li>About</li>
-                <li>Contact Us</li>
-            </ul>
+    transition={{duration:0.8, ease: 'easeOut'}}
+    initial={{opacity:0, y:-70}}
+    animate={{opacity:1,y:0}}
+     viewport={{ once: true, amount: 0.2 }} 
+    
+    
+    
+    >
+      <nav className="grid grid-cols-3 items-center w-full max-w-screen-xl mx-auto">
+        {/* Left Nav */}
+        <div className="flex gap-8 items-center">
+          <Link href="/about" className="group relative">
+            <span className="transition-all duration-300 ">
+              About
+            </span>
+            <span className="absolute left-0 -bottom-1 h-[1px] w-0 bg-gray-800 transition-all duration-300 group-hover:w-full" />
+          </Link>
 
-
+          <Link href="/contact" className="group relative">
+            <span className="transition-all duration-300 ">
+              Contact Us
+            </span>
+            <span className="absolute left-0 -bottom-1 h-[1px] w-0 bg-gray-800 transition-all duration-300 group-hover:w-full" />
+          </Link>
         </div>
-        <div className='w-1/3 flex justify-center '>
-             <Image src="/images/Logo.png" width={200} height={100} alt="Logo" />
 
+        {/* Center Logo */}
+        <div className="flex justify-center">
+            <Link href='/'><Image src="/images/Logo.png" width={240} height={50} alt="Logo" /></Link>
+          
         </div>
 
-        <div className='text-sm  flex justify-end items-center-safe w-1/3 '>
-            <ul className='flex gap-10'>
-                <li>Shop</li>
-            </ul>
+        {/* Right Nav */}
+        <div className="flex justify-end items-center">
+          <Link href="/shop" className="group relative">
+            <span className="transition-all duration-300 ">
+              Shop
+            </span>
+            <span className="absolute left-0 -bottom-1 h-[1px] w-0 bg-gray-800 transition-all duration-300 group-hover:w-full" />
+          </Link>
         </div>
-      
-     
-    </div>
+      </nav>
+    </motion.header>
   );
 };
 
