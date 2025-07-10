@@ -30,14 +30,14 @@ const textVariants = {
 const Hero = () => {
   return (
     <motion.div
-      className="flex min-h-screen  bg-[url('/images/Hero-bg.webp')] bg-cover bg-center items-center justify-center text-white flex-col px-10 text-center"
+      className="flex min-h-screen  bg-[url('/images/Hero-bg.webp')] bg-cover bg-center items-center justify-center text-white flex-col px-10 text-center  "
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       
       <motion.h1
-        className="font-medium mt-auto text-4xl md:text-5xl"
+        className="font-medium mt-auto text-4xl md:text-5xl "
         variants={textVariants}
         custom={0}
         initial="hidden"
@@ -55,7 +55,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        <h5 className="text-black">sed do eiusmod </h5>
+        <h5 className="text-white">sed do eiusmod </h5>
       </motion.div>
     </motion.div>
   );
