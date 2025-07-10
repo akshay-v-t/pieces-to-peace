@@ -20,11 +20,11 @@ const textVariants = {
 
 const AboutSection = () => {
   return (
-    <div className="items-center flex px-20 py-40 gap-20">
+    <div className="items-center flex md:px-20 px-10 py-40 md:gap-0 gap-20 flex-wrap">
 
 
       {/* Left Side Images */}
-      <motion.div className="w-1/3 relative"
+      <motion.div className="md:w-1/3 lg:w-1/3 w-full relative"
 
       transition={{ duration: 0.8, ease: 'easeOut' }}
        initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ const AboutSection = () => {
 
       {/* Right Side Text */}
       <motion.div
-        className="w-2/2 pl-20 flex-col gap-6 flex"
+        className="md:w-2/3 w-full md:pl-20 flex-col gap-6 flex"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}

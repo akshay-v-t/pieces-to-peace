@@ -18,7 +18,7 @@ const KeyFeatures = () => {
       />
 
       <div className='bg-white/80 p-20 z-10'>
-        <h2 className='text-9xl'>
+        <h2 className='md:text-9xl text-xl '>
 
               Your Trusted partner in exceptional fabric
 
@@ -27,18 +27,9 @@ const KeyFeatures = () => {
       </div>
       </div>
      
-      
+    
 
-      
-
-      
-
-
-
-  
-
-
-  <div className='grid grid-cols-4 gap-20 p-10'>
+  <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-20 p-10 text-center '>
 
         <div className='flex flex-col gap-2'>
             <h3>Print on Demand</h3>

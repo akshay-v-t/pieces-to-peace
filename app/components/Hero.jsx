@@ -30,7 +30,7 @@ const textVariants = {
 const Hero = () => {
   return (
     <motion.div
-      className="flex min-h-screen  bg-[url('/images/Hero-bg.webp')] bg-cover bg-center items-center justify-center text-white flex-col "
+      className="flex min-h-screen  bg-[url('/images/Hero-bg.webp')] bg-cover bg-center items-center justify-center text-white flex-col px-10 text-center"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

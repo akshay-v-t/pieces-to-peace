@@ -6,14 +6,14 @@ const OurValuesSection = () => {
   return (
 
   
-    <div className=' flex flex-col p-40 pt-40 '>
+    <div className=' flex flex-col md:p-20 lg:p-40 pt-40 p-10'>
 
-        <h2 className='text-center'>Our Values</h2>
+        <h2 className='text-center mb-10'>Our Values</h2>
 
 
-        <div className='flex gap-30'>
+        <div className='flex-row md:gap-10 lg:gap-30 md:flex'>
 
-            <div className='w-1/3'>
+            <div className='md:w-1/3'>
 
           
 
@@ -34,7 +34,7 @@ const OurValuesSection = () => {
     
       
        </div>
-       <div className='w-1/3'>
+       <div className='md:w-1/3'>
 
        
     <Image
@@ -53,7 +53,7 @@ const OurValuesSection = () => {
     
       
        </div>
-<div className='w-1/3'>
+<div className='md:w-1/3'>
 
        
     <Image

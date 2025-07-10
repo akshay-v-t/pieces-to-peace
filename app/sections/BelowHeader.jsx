@@ -13,7 +13,7 @@ const imageVariants = {
 
 const BelowHeader = () => {
   return (
-    <div className="flex flex-row ">
+    <div className="flex md:flex-row flex-col ">
       {/* Left Section */}
       <div className="relative flex min-h-screen w-full md:w-[50vw] items-center justify-center overflow-hidden">
         <motion.div
@@ -23,7 +23,7 @@ const BelowHeader = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         />
-        <h1 className="text-white text-3xl font-bold z-10 relative">aliquip ex ea</h1>
+        <h1 className="text-[#49352C] text-3xl font-bold z-10 relative">aliquip ex ea</h1>
       </div>
 
       {/* Right Section */}
@@ -36,7 +36,7 @@ const BelowHeader = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ delay: 0.3, duration: 1.2 }}
         />
-        <h1 className="text-white text-3xl font-bold z-10 relative">occaecat cupidatat</h1>
+        <h1 className="text-[#49352C] text-3xl font-bold z-10 relative">occaecat cupidatat</h1>
       </div>
     </div>
   );

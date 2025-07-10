@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col">
-      <div className='mt-auto bg-[#D2C0AB] w-full py-20 px-10 flex flex-col md:flex-row flex-wrap md:justify-center  border-t-1'>
+      <div className='mt-auto bg-[#D2C0AB] w-full py-20 px-10 flex flex-col md:flex-row flex-wrap md:justify-center gap-10 md:gap-0   border-t-1'>
         <div className='w-full md:w-1/5'>
       <h3>Products</h3>
         <ul className='space-y-2'>
